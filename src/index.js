@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from 'styled-components'
+// eslint-disable-next-line
+import reactDom from 'react-dom';
+
+const theme = {
+  colors: {
+    red_300: '#d42a2a',
+    red_400: '#a52424',
+    red_500: '#7d1c1c',
+  }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider theme={theme}>
     <App />
-  </React.StrictMode>,
+  </ThemeProvider>
+  ,
   document.getElementById('root')
 );
 
