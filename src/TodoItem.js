@@ -1,12 +1,9 @@
-// eslint-disable-next-line
 import logo from './logo.svg';
 import './App.css';
-// eslint-disable-next-line
 import react from 'react'
 import styled from 'styled-components'
 import { MEDIA_QUERY_MD, MEDIA_QUERY_LG } from './constants/style'
 
-// eslint-disable-next-line
 const titleStyle = {
   color: 'red',
   textAlign: 'center'
@@ -76,13 +73,13 @@ const TitleWrapper = styled.h2`
     color: yellow;
   }
 `
-// eslint-disable-next-line
+
 const Description = styled.p`
   color: red;
   padding: 20px;
   border: 1px solid black;
 `
-// eslint-disable-next-line
+
 function Title({ size }) {
   return (
     <TitleWrapper>hello<span>yooo</span></TitleWrapper>

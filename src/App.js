@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import TodoItem from './TodoItem'
-// eslint-disable-next-line
 import { useState, useRef } from 'react'
 
-// eslint-disable-next-line
+
 const BlackTodoItem = styled(TodoItem)`
   background: black;
 `
@@ -34,10 +33,9 @@ function App() {
     setValue(e.target.value)
   }
 
-  // eslint-disable-next-line
+ 
   const handleTogglerIsDone = id => {
     setTodos(todos.map(todo => {
-        // eslint-disable-next-line
         if(todo.id != id) return todo
         return {
           ...todo,
@@ -47,7 +45,6 @@ function App() {
     ))
   }
 
-  // eslint-disable-next-line
   const titleSize = "XL"
   return (
     <div className="App">

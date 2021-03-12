@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'styled-components'
-// eslint-disable-next-line
 import reactDom from 'react-dom';
 
 const theme = {
