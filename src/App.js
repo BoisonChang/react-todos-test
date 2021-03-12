@@ -1,11 +1,6 @@
-import styled from 'styled-components'
 import TodoItem from './TodoItem'
-import { useState, useRef } from 'react'
+import { useState} from 'react'
 
-
-const BlackTodoItem = styled(TodoItem)`
-  background: black;
-`
 let id = 3
 function App() {
   const [todos, setTodos] = useState([
@@ -36,7 +31,7 @@ function App() {
  
   const handleTogglerIsDone = id => {
     setTodos(todos.map(todo => {
-        if(todo.id != id) return todo
+        if(todo.id !== id) return todo
         return {
           ...todo,
           isDone: !todo.isDone
@@ -45,7 +40,6 @@ function App() {
     ))
   }
 
-  const titleSize = "XL"
   return (
     <div className="App">
       <input type="text" placeholder="todo" value={value} onChange={handleInputChange}/>

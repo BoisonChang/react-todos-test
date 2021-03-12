@@ -1,13 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import react from 'react'
 import styled from 'styled-components'
 import { MEDIA_QUERY_MD, MEDIA_QUERY_LG } from './constants/style'
-
-const titleStyle = {
-  color: 'red',
-  textAlign: 'center'
-}
 
 const TodoItemWrapper = styled.div`
   display: flex;
@@ -59,33 +52,6 @@ const Button = styled.button`
 const RedButton = styled(Button)`
   color: red;  
 `
-
-
-const TitleWrapper = styled.h2`
-  display: flex;
-  color: blue;
-
-  &:hover {
-    color: red;
-  }
-  
-  span {
-    color: yellow;
-  }
-`
-
-const Description = styled.p`
-  color: red;
-  padding: 20px;
-  border: 1px solid black;
-`
-
-function Title({ size }) {
-  return (
-    <TitleWrapper>hello<span>yooo</span></TitleWrapper>
-  )
-}
-
 export default function TodoItem ({ className, size, todo, handleDeleteTodo, handleTogglerIsDone }) {
     const handleTogglerClick = () => {
         handleTogglerIsDone(todo.id)
