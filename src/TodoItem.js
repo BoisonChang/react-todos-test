@@ -52,6 +52,7 @@ const Button = styled.button`
 const RedButton = styled(Button)`
   color: red;  
 `
+
 export default function TodoItem ({ className, size, todo, handleDeleteTodo, handleTogglerIsDone }) {
     const handleTogglerClick = () => {
         handleTogglerIsDone(todo.id)
@@ -63,6 +64,7 @@ export default function TodoItem ({ className, size, todo, handleDeleteTodo, han
     return (
         <TodoItemWrapper className={className} data-todo-id={todo.id}>
             <TodoContent $isDone={todo.isDone} size={size}>{todo.content}</TodoContent>
+            <a href={window.encodeURIComponent(todo.content)}> click me </a>
             <TodoButtonWrapper>
                 <Button onClick={handleTogglerClick}>
                     {todo.isDone ? '未完成' : '已完成'}
